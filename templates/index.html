@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 EEG Zihin Durumu Takip Sistemi</title>
+    
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .header .subtitle {
+            color: #aaa;
+            font-size: 1.1em;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            color: #1a1a2e;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button.danger {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        button.secondary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .status-bar {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4ecdc4;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 1200px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .card {
+            background: rgba(22, 33, 62, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .card h2 {
+            margin-bottom: 20px;
+            color: #4ecdc4;
+            font-size: 1.5em;
+            border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .metric {
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(15, 52, 96, 0.5);
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+        
+        .metric.stress { border-color: #ff6b6b; }
+        .metric.focus { border-color: #4ecdc4; }
+        .metric.sleepiness { border-color: #ffe66d; }
+        
+        .metric-label {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 5px;
+        }
+        
+        .metric-value {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .metric.stress .metric-value { color: #ff6b6b; }
+        .metric.focus .metric-value { color: #4ecdc4; }
+        .metric.sleepiness .metric-value { color: #ffe66d; }
+        
+        .progress-bar {
+            height: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.5s ease;
+        }
+        
+        .stress .progress-fill { background: linear-gradient(90deg, #ff6b6b, #ee5a6f); }
+        .focus .progress-fill { background: linear-gradient(90deg, #4ecdc4, #44a08d); }
+        .sleepiness .progress-fill { background: linear-gradient(90deg, #ffe66d, #ffd93d); }
+        
+        .recommendation {
+            background: rgba(15, 52, 96, 0.5);
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #4ecdc4;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .recommendation:hover {
+            transform: translateX(5px);
+            background: rgba(15, 52, 96, 0.7);
+        }
+        
+        .recommendation h3 {
+            color: #4ecdc4;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .recommendation p {
+            color: #ccc;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        
+        .recommendation .meta {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 20px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .empty-state .icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4ecdc4;
+            color: #1a1a2e;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.4);
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bildirim -->
+    <div id="notification" class="notification"></div>
+    
+    <!-- Başlık -->
+    <div class="header">
+        <h1>🧠 EEG Zihin Durumu Takip Sistemi</h1>
+        <p class="subtitle">Gerçek Zamanlı Beyin Dalgası Analizi ve Kişiselleştirilmiş Öneriler</p>
+    </div>
+    
+    <!-- Durum Çubuğu -->
+    <div class="status-bar">
+        <div class="status-indicator">
+            <div class="status-dot" id="statusDot"></div>
+            <span id="statusText">Bağlantı bekleniyor...</span>
+        </div>
+        <div id="currentMode">Mod: <strong>relaxed</strong></div>
+    </div>
+    
+    <!-- Kontroller -->
+    <div class="controls">
+        <button onclick="startStreaming()">▶️ Başlat</button>
+        <button onclick="stopStreaming()" class="danger">⏸️ Durdur</button>
+        <button onclick="changeMode('relaxed')" class="secondary">😌 Rahat</button>
+        <button onclick="changeMode('focused')" class="secondary">🎯 Odaklı</button>
+        <button onclick="changeMode('stressed')" class="secondary">😰 Stresli</button>
+        <button onclick="changeMode('sleepy')" class="secondary">😴 Uykulu</button>
+        <button onclick="saveSession()">💾 Kaydet</button>
+        <button onclick="clearSession()" class="danger">🗑️ Temizle</button>
+    </div>
+    
+    <!-- Ana İçerik -->
+    <div class="container">
+        <!-- Sol Kolon: Metrikler ve Öneriler -->
+        <div>
+            <!-- Zihin Durumu Metrikleri -->
+            <div class="card">
+                <h2>📊 Zihin Durumu</h2>
+                
+                <div class="metric stress">
+                    <div class="metric-label">Stres Seviyesi</div>
+                    <div class="metric-value" id="stressValue">--</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="stressBar" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <div class="metric focus">
+                    <div class="metric-label">Odak Seviyesi</div>
+                    <div class="metric-value" id="focusValue">--</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="focusBar" style="width: 0%"></div>
+                    </div>
+                </div>
+                
+                <div class="metric sleepiness">
+                    <div class="metric-label">Uykusuzluk Seviyesi</div>
+                    <div class="metric-value" id="sleepinessValue">--</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="sleepinessBar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Öneriler -->
+            <div class="card">
+                <h2>💡 Kişiselleştirilmiş Öneriler</h2>
+                <div id="recommendations">
+                    <div class="empty-state">
+                        <div class="icon">🎯</div>
+                        <p>Analiz başlatıldığında öneriler burada görünecek</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sağ Kolon: Grafikler -->
+        <div>
+            <!-- EEG Dalga Güçleri -->
+            <div class="card">
+                <h2>🌊 EEG Dalga Güçleri</h2>
+                <div class="chart-container">
+                    <canvas id="bandPowerChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- Zihin Durumu Geçmişi -->
+            <div class="card">
+                <h2>📈 Zihin Durumu Geçmişi</h2>
+                <div class="chart-container">
+                    <canvas id="historyChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // WebSocket bağlantısı
+        const socket = io('http://localhost:5000');
+        
+        // Grafik verileri
+        const bandData = {
+            labels: [],
+            datasets: {
+                delta: [],
+                theta: [],
+                alpha: [],
+                beta: [],
+                gamma: []
+            }
+        };
+        
+        const historyData = {
+            labels: [],
+            datasets: {
+                stress: [],
+                focus: [],
+                sleepiness: []
+            }
+        };
+        
+        // Chart.js konfigürasyonu
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 0 },
+            plugins: {
+                legend: {
+                    labels: { color: '#eee' }
+                }
+            },
+            scales: {
+                x: {
+                    ticks: { color: '#aaa' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                },
+                y: {
+                    ticks: { color: '#aaa' },
+                    grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                }
+            }
+        };
+        
+        // Band Power Chart
+        const bandCtx = document.getElementById('bandPowerChart').getContext('2d');
+        const bandChart = new Chart(bandCtx, {
+            type: 'line',
+            data: {
+                labels: bandData.labels,
+                datasets: [
+                    {
+                        label: 'Delta (0.5-4 Hz)',
+                        data: bandData.datasets.delta,
+                        borderColor: '#e74c3c',
+                        backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Theta (4-8 Hz)',
+                        data: bandData.datasets.theta,
+                        borderColor: '#9b59b6',
+                        backgroundColor: 'rgba(155, 89, 182, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Alpha (8-13 Hz)',
+                        data: bandData.datasets.alpha,
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Beta (13-30 Hz)',
+                        data: bandData.datasets.beta,
+                        borderColor: '#2ecc71',
+                        backgroundColor: 'rgba(46, 204, 113, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Gamma (30-100 Hz)',
+                        data: bandData.datasets.gamma,
+                        borderColor: '#f39c12',
+                        backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    ...commonOptions.scales,
+                    y: {
+                        ...commonOptions.scales.y,
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Güç (µV)',
+                            color: '#eee'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Mental State History Chart
+        const historyCtx = document.getElementById('historyChart').getContext('2d');
+        const historyChart = new Chart(historyCtx, {
+            type: 'line',
+            data: {
+                labels: historyData.labels,
+                datasets: [
+                    {
+                        label: 'Stres',
+                        data: historyData.datasets.stress,
+                        borderColor: '#ff6b6b',
+                        backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Odak',
+                        data: historyData.datasets.focus,
+                        borderColor: '#4ecdc4',
+                        backgroundColor: 'rgba(78, 205, 196, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Uykusuzluk',
+                        data: historyData.datasets.sleepiness,
+                        borderColor: '#ffe66d',
+                        backgroundColor: 'rgba(255, 230, 109, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    ...commonOptions.scales,
+                    y: {
+                        ...commonOptions.scales.y,
+                        min: 0,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Seviye (0-100)',
+                            color: '#eee'
+                        }
+                    }
+                }
+            }
+        });
+        
+        // === WEBSOCKET OLAYLARI ===
+        
+        socket.on('connected', (data) => {
+            console.log('✅ Bağlandı:', data);
+            updateStatus('Bağlı - Hazır', true);
+            showNotification('Sisteme bağlandı!');
+        });
+        
+        socket.on('eeg_update', (data) => {
+            console.log('📡 Yeni veri:', data);
+            
+            // Metrikleri güncelle
+            updateMetrics(data.mental_state);
+            
+            // Grafikleri güncelle
+            updateCharts(data);
+            
+            // Önerileri güncelle
+            updateRecommendations(data.recommendations);
+            
+            // Modu göster
+            document.getElementById('currentMode').innerHTML = 
+                `Mod: <strong>${data.current_mode}</strong>`;
+        });
+        
+        socket.on('streaming_started', () => {
+            updateStatus('Akış Aktif', true);
+            showNotification('Veri akışı başlatıldı');
+        });
+        
+        socket.on('streaming_stopped', () => {
+            updateStatus('Akış Durduruldu', false);
+            showNotification('Veri akışı durduruldu', 'warning');
+        });
+        
+        socket.on('mode_changed', (data) => {
+            showNotification(`Mod değiştirildi: ${data.mode}`);
+        });
+        
+        socket.on('disconnect', () => {
+            updateStatus('Bağlantı Kesildi', false);
+            showNotification('Sunucu bağlantısı kesildi', 'error');
+        });
+        
+        // === YARDIMCI FONKSİYONLAR ===
+        
+        function updateStatus(text, isActive) {
+            document.getElementById('statusText').textContent = text;
+            const dot = document.getElementById('statusDot');
+            dot.style.background = isActive ? '#4ecdc4' : '#ff6b6b';
+        }
+        
+        function updateMetrics(mentalState) {
+            // Değerleri güncelle
+            document.getElementById('stressValue').textContent = mentalState.stress;
+            document.getElementById('focusValue').textContent = mentalState.focus;
+            document.getElementById('sleepinessValue').textContent = mentalState.sleepiness;
+            
+            // Progress bar'ları güncelle
+            document.getElementById('stressBar').style.width = mentalState.stress + '%';
+            document.getElementById('focusBar').style.width = mentalState.focus + '%';
+            document.getElementById('sleepinessBar').style.width = mentalState.sleepiness + '%';
+        }
+        
+        function updateCharts(data) {
+            const time = new Date(data.timestamp).toLocaleTimeString();
+            
+            // Band Powers Chart
+            bandData.labels.push(time);
+            bandData.datasets.delta.push(data.band_powers.delta_power);
+            bandData.datasets.theta.push(data.band_powers.theta_power);
+            bandData.datasets.alpha.push(data.band_powers.alpha_power);
+            bandData.datasets.beta.push(data.band_powers.beta_power);
+            bandData.datasets.gamma.push(data.band_powers.gamma_power);
+            
+            // Son 30 veriyi tut
+            if (bandData.labels.length > 30) {
+                bandData.labels.shift();
+                Object.keys(bandData.datasets).forEach(key => {
+                    bandData.datasets[key].shift();
+                });
+            }
+            
+            bandChart.update();
+            
+            // Mental State History Chart
+            historyData.labels.push(time);
+            historyData.datasets.stress.push(data.mental_state.stress);
+            historyData.datasets.focus.push(data.mental_state.focus);
+            historyData.datasets.sleepiness.push(data.mental_state.sleepiness);
+            
+            if (historyData.labels.length > 30) {
+                historyData.labels.shift();
+                Object.keys(historyData.datasets).forEach(key => {
+                    historyData.datasets[key].shift();
+                });
+            }
+            
+            historyChart.update();
+        }
+        
+        function updateRecommendations(recommendations) {
+            const container = document.getElementById('recommendations');
+            
+            if (recommendations.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="icon">✅</div>
+                        <p>Zihin durumunuz dengeli! Öneri yok.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = '';
+            
+            recommendations.forEach(rec => {
+                const div = document.createElement('div');
+                div.className = 'recommendation';
+                
+                let metaHTML = '<div class="meta">';
+                if (rec.frequency_hz) {
+                    metaHTML += `<span>🎵 ${rec.frequency_hz} Hz</span>`;
+                }
+                metaHTML += `<span>⏱️ ${rec.duration_minutes} dakika</span>`;
+                metaHTML += '</div>';
+                
+                div.innerHTML = `
+                    <h3>${rec.title}</h3>
+                    <p>${rec.description}</p>
+                    ${metaHTML}
+                `;
+                
+                container.appendChild(div);
+            });
+        }
+        
+        function showNotification(message, type = 'success') {
+            const notif = document.getElementById('notification');
+            notif.textContent = message;
+            notif.style.display = 'block';
+            
+            if (type === 'error') {
+                notif.style.background = '#ff6b6b';
+                notif.style.color = '#fff';
+            } else if (type === 'warning') {
+                notif.style.background = '#ffe66d';
+                notif.style.color = '#1a1a2e';
+            } else {
+                notif.style.background = '#4ecdc4';
+                notif.style.color = '#1a1a2e';
+            }
+            
+            setTimeout(() => {
+                notif.style.display = 'none';
+            }, 3000);
+        }
+        
+        // === KONTROL FONKSİYONLARI ===
+        
+        function startStreaming() {
+            socket.emit('start_streaming');
+        }
+        
+        function stopStreaming() {
+            socket.emit('stop_streaming');
+        }
+        
+        function changeMode(mode) {
+            socket.emit('change_mode', { mode: mode });
+        }
+        
+        function saveSession() {
+            fetch('http://localhost:5000/api/session/save', { 
+                method: 'POST' 
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showNotification(`✅ Kaydedildi: ${data.filename} (${data.data_points} veri noktası)`);
+                } else {
+                    showNotification('❌ Kayıt hatası', 'error');
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                showNotification('❌ Bağlantı hatası', 'error');
+            });
+        }
+        
+        function clearSession() {
+            if (confirm('Session verisini temizlemek istediğinize emin misiniz?')) {
+                fetch('http://localhost:5000/api/session/clear', { 
+                    method: 'POST' 
+                })
+                .then(res => res.json())
+                .then(data => {
+                    showNotification('🗑️ Session temizlendi');
+                    
+                    // Grafikleri sıfırla
+                    bandData.labels = [];
+                    Object.keys(bandData.datasets).forEach(key => {
+                        bandData.datasets[key] = [];
+                    });
+                    bandChart.update();
+                    
+                    historyData.labels = [];
+                    Object.keys(historyData.datasets).forEach(key => {
+                        historyData.datasets[key] = [];
+                    });
+                    historyChart.update();
+                })
+                .catch(err => {
+                    console.error(err);
+                    showNotification('❌ Temizleme hatası', 'error');
+                });
+            }
+        }
+    </script>
+</body>
+</html>

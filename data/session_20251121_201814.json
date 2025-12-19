@@ -1,0 +1,1173 @@
+[
+  {
+    "timestamp": "2025-11-21T20:17:40.428289",
+    "band_powers": {
+      "delta_power": 5.001623519009213,
+      "theta_power": 8.001623519009215,
+      "alpha_power": 15.001623519009215,
+      "beta_power": 5.001623519009213,
+      "gamma_power": 2.0016235190092133,
+      "timestamp": 1.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:41.432312",
+    "band_powers": {
+      "delta_power": 5.002308612453579,
+      "theta_power": 8.002308612453579,
+      "alpha_power": 15.002308612453579,
+      "beta_power": 5.002308612453579,
+      "gamma_power": 2.002308612453579,
+      "timestamp": 2.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:42.438146",
+    "band_powers": {
+      "delta_power": 5.026756513861788,
+      "theta_power": 8.026756513861788,
+      "alpha_power": 15.026756513861788,
+      "beta_power": 5.026756513861788,
+      "gamma_power": 2.0267565138617867,
+      "timestamp": 3.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:43.445659",
+    "band_powers": {
+      "delta_power": 5.005756141109503,
+      "theta_power": 8.0057561411095,
+      "alpha_power": 15.0057561411095,
+      "beta_power": 5.005756141109503,
+      "gamma_power": 2.0057561411095013,
+      "timestamp": 4.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:44.450073",
+    "band_powers": {
+      "delta_power": 4.983741141985517,
+      "theta_power": 7.983741141985517,
+      "alpha_power": 14.983741141985515,
+      "beta_power": 4.983741141985517,
+      "gamma_power": 1.9837411419855164,
+      "timestamp": 5.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:45.460155",
+    "band_powers": {
+      "delta_power": 5.013644488618497,
+      "theta_power": 8.013644488618496,
+      "alpha_power": 15.013644488618496,
+      "beta_power": 5.013644488618497,
+      "gamma_power": 2.013644488618497,
+      "timestamp": 6.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:46.467349",
+    "band_powers": {
+      "delta_power": 5.008660686021587,
+      "theta_power": 8.008660686021587,
+      "alpha_power": 15.008660686021589,
+      "beta_power": 5.008660686021587,
+      "gamma_power": 2.008660686021587,
+      "timestamp": 7.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:47.470552",
+    "band_powers": {
+      "delta_power": 5.026199634615871,
+      "theta_power": 8.026199634615871,
+      "alpha_power": 15.026199634615871,
+      "beta_power": 5.026199634615871,
+      "gamma_power": 2.026199634615871,
+      "timestamp": 8.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:48.475782",
+    "band_powers": {
+      "delta_power": 5.030810899642027,
+      "theta_power": 8.030810899642027,
+      "alpha_power": 15.030810899642027,
+      "beta_power": 5.030810899642027,
+      "gamma_power": 2.0308108996420278,
+      "timestamp": 9.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:49.481082",
+    "band_powers": {
+      "delta_power": 4.9908870357658515,
+      "theta_power": 7.990887035765851,
+      "alpha_power": 14.990887035765851,
+      "beta_power": 4.9908870357658515,
+      "gamma_power": 1.990887035765851,
+      "timestamp": 10.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:50.487598",
+    "band_powers": {
+      "delta_power": 4.979360126247987,
+      "theta_power": 7.979360126247986,
+      "alpha_power": 14.979360126247986,
+      "beta_power": 4.979360126247987,
+      "gamma_power": 1.9793601262479867,
+      "timestamp": 11.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:51.491047",
+    "band_powers": {
+      "delta_power": 5.005863575140829,
+      "theta_power": 8.005863575140829,
+      "alpha_power": 15.005863575140829,
+      "beta_power": 5.005863575140829,
+      "gamma_power": 2.0058635751408285,
+      "timestamp": 12.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:52.496116",
+    "band_powers": {
+      "delta_power": 4.975344876259445,
+      "theta_power": 7.975344876259446,
+      "alpha_power": 14.975344876259445,
+      "beta_power": 4.975344876259445,
+      "gamma_power": 1.9753448762594452,
+      "timestamp": 13.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:53.502381",
+    "band_powers": {
+      "delta_power": 4.96402378416375,
+      "theta_power": 7.964023784163751,
+      "alpha_power": 14.96402378416375,
+      "beta_power": 4.96402378416375,
+      "gamma_power": 1.9640237841637505,
+      "timestamp": 14.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 38,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:54.506826",
+    "band_powers": {
+      "delta_power": 4.982728803425905,
+      "theta_power": 7.982728803425905,
+      "alpha_power": 14.982728803425905,
+      "beta_power": 4.982728803425905,
+      "gamma_power": 1.982728803425905,
+      "timestamp": 15.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:55.514528",
+    "band_powers": {
+      "delta_power": 4.984570581779974,
+      "theta_power": 7.984570581779974,
+      "alpha_power": 14.984570581779973,
+      "beta_power": 4.984570581779974,
+      "gamma_power": 1.9845705817799737,
+      "timestamp": 16.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:56.518712",
+    "band_powers": {
+      "delta_power": 5.036419314308473,
+      "theta_power": 8.036419314308473,
+      "alpha_power": 15.036419314308475,
+      "beta_power": 5.036419314308473,
+      "gamma_power": 2.036419314308473,
+      "timestamp": 17.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:57.523827",
+    "band_powers": {
+      "delta_power": 5.02290055284073,
+      "theta_power": 8.02290055284073,
+      "alpha_power": 15.02290055284073,
+      "beta_power": 5.02290055284073,
+      "gamma_power": 2.0229005528407296,
+      "timestamp": 18.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:58.528706",
+    "band_powers": {
+      "delta_power": 4.973692712353708,
+      "theta_power": 7.973692712353708,
+      "alpha_power": 14.973692712353708,
+      "beta_power": 4.973692712353708,
+      "gamma_power": 1.9736927123537082,
+      "timestamp": 19.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:17:59.533018",
+    "band_powers": {
+      "delta_power": 5.010398402788182,
+      "theta_power": 8.01039840278818,
+      "alpha_power": 15.010398402788184,
+      "beta_power": 5.010398402788182,
+      "gamma_power": 2.0103984027881814,
+      "timestamp": 20.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:00.538106",
+    "band_powers": {
+      "delta_power": 5.031271961460828,
+      "theta_power": 8.031271961460828,
+      "alpha_power": 15.03127196146083,
+      "beta_power": 5.031271961460828,
+      "gamma_power": 2.0312719614608286,
+      "timestamp": 21.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:01.544868",
+    "band_powers": {
+      "delta_power": 5.02926174399213,
+      "theta_power": 8.02926174399213,
+      "alpha_power": 15.02926174399213,
+      "beta_power": 5.02926174399213,
+      "gamma_power": 2.029261743992131,
+      "timestamp": 22.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:02.550170",
+    "band_powers": {
+      "delta_power": 5.0390211803394465,
+      "theta_power": 8.039021180339446,
+      "alpha_power": 15.039021180339446,
+      "beta_power": 5.0390211803394465,
+      "gamma_power": 2.0390211803394465,
+      "timestamp": 23.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:03.556607",
+    "band_powers": {
+      "delta_power": 5.0624131051306005,
+      "theta_power": 8.0624131051306,
+      "alpha_power": 15.0624131051306,
+      "beta_power": 5.0624131051306005,
+      "gamma_power": 2.0624131051305996,
+      "timestamp": 24.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:04.560711",
+    "band_powers": {
+      "delta_power": 5.059534047016999,
+      "theta_power": 8.059534047017,
+      "alpha_power": 15.059534047017,
+      "beta_power": 5.059534047016999,
+      "gamma_power": 2.0595340470170003,
+      "timestamp": 25.99609375
+    },
+    "mental_state": {
+      "stress": 21,
+      "focus": 39,
+      "sleepiness": 47,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 20.0,
+        "duration_minutes": 15,
+        "title": "🎵 Beta Dalgası - Konsantrasyon Artırıcı",
+        "description": "20 Hz Beta dalgası ile odaklanmayı destekler. Çalışma sırasında arka planda çalabilir.",
+        "priority": 1
+      },
+      {
+        "type": "break",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "☕ Kısa Mola",
+        "description": "5 dakika ayağa kalkın, gerinin, su için. Pomodoro tekniği: 25 dk çalış, 5 dk mola.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "relaxed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:05.567760",
+    "band_powers": {
+      "delta_power": 4.518034607460535,
+      "theta_power": 7.268034607460535,
+      "alpha_power": 13.018034607460535,
+      "beta_power": 8.268034607460535,
+      "gamma_power": 3.5180346074605358,
+      "timestamp": 26.99609375
+    },
+    "mental_state": {
+      "stress": 34,
+      "focus": 86,
+      "sleepiness": 34,
+      "confidence": 0.9
+    },
+    "recommendations": [],
+    "current_mode": "focused"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:06.572282",
+    "band_powers": {
+      "delta_power": 3.4863535755492485,
+      "theta_power": 5.736353575549248,
+      "alpha_power": 8.986353575549249,
+      "beta_power": 14.736353575549249,
+      "gamma_power": 6.4863535755492485,
+      "timestamp": 27.99609375
+    },
+    "mental_state": {
+      "stress": 53,
+      "focus": 100,
+      "sleepiness": 19,
+      "confidence": 0.9
+    },
+    "recommendations": [],
+    "current_mode": "focused"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:07.577748",
+    "band_powers": {
+      "delta_power": 2.9867772018436285,
+      "theta_power": 4.986777201843628,
+      "alpha_power": 6.986777201843628,
+      "beta_power": 17.98677720184363,
+      "gamma_power": 7.986777201843628,
+      "timestamp": 28.99609375
+    },
+    "mental_state": {
+      "stress": 58,
+      "focus": 100,
+      "sleepiness": 16,
+      "confidence": 0.9
+    },
+    "recommendations": [],
+    "current_mode": "focused"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:08.584788",
+    "band_powers": {
+      "delta_power": 2.992625958184372,
+      "theta_power": 4.992625958184373,
+      "alpha_power": 6.992625958184372,
+      "beta_power": 17.99262595818437,
+      "gamma_power": 7.992625958184372,
+      "timestamp": 29.99609375
+    },
+    "mental_state": {
+      "stress": 58,
+      "focus": 100,
+      "sleepiness": 16,
+      "confidence": 0.9
+    },
+    "recommendations": [],
+    "current_mode": "focused"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:09.588612",
+    "band_powers": {
+      "delta_power": 3.2509431457556475,
+      "theta_power": 5.250943145755648,
+      "alpha_power": 6.250943145755648,
+      "beta_power": 18.500943145755645,
+      "gamma_power": 9.000943145755649,
+      "timestamp": 30.99609375
+    },
+    "mental_state": {
+      "stress": 60,
+      "focus": 100,
+      "sleepiness": 17,
+      "confidence": 0.9
+    },
+    "recommendations": [],
+    "current_mode": "stressed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:10.596409",
+    "band_powers": {
+      "delta_power": 3.7598377571155597,
+      "theta_power": 5.759837757115561,
+      "alpha_power": 4.759837757115561,
+      "beta_power": 19.50983775711556,
+      "gamma_power": 11.00983775711556,
+      "timestamp": 31.99609375
+    },
+    "mental_state": {
+      "stress": 63,
+      "focus": 100,
+      "sleepiness": 18,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 10.0,
+        "duration_minutes": 10,
+        "title": "🎵 Alpha Dalgası - Stres Azaltıcı",
+        "description": "10 Hz Alpha dalgası ile derin rahatlamayı destekler. Kulaklıkla dinlemeniz önerilir.",
+        "priority": 1
+      },
+      {
+        "type": "breathing",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "🫁 4-7-8 Nefes Tekniği",
+        "description": "4 saniye burnunuzdan nefes alın, 7 saniye tutun, 8 saniye ağzınızdan verin. 4 kez tekrarlayın.",
+        "priority": 1
+      },
+      {
+        "type": "meditation",
+        "frequency_hz": null,
+        "duration_minutes": 10,
+        "title": "🧘 Beden Tarama Meditasyonu",
+        "description": "Vücudunuzdaki her bölgeyi sırayla tarayın ve gevşetin.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "stressed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:11.599539",
+    "band_powers": {
+      "delta_power": 3.9905548731551423,
+      "theta_power": 5.990554873155143,
+      "alpha_power": 3.9905548731551423,
+      "beta_power": 19.990554873155144,
+      "gamma_power": 11.990554873155142,
+      "timestamp": 32.99609375
+    },
+    "mental_state": {
+      "stress": 65,
+      "focus": 100,
+      "sleepiness": 18,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 10.0,
+        "duration_minutes": 10,
+        "title": "🎵 Alpha Dalgası - Stres Azaltıcı",
+        "description": "10 Hz Alpha dalgası ile derin rahatlamayı destekler. Kulaklıkla dinlemeniz önerilir.",
+        "priority": 1
+      },
+      {
+        "type": "breathing",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "🫁 4-7-8 Nefes Tekniği",
+        "description": "4 saniye burnunuzdan nefes alın, 7 saniye tutun, 8 saniye ağzınızdan verin. 4 kez tekrarlayın.",
+        "priority": 1
+      },
+      {
+        "type": "meditation",
+        "frequency_hz": null,
+        "duration_minutes": 10,
+        "title": "🧘 Beden Tarama Meditasyonu",
+        "description": "Vücudunuzdaki her bölgeyi sırayla tarayın ve gevşetin.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "stressed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:12.605306",
+    "band_powers": {
+      "delta_power": 3.9873803471907636,
+      "theta_power": 5.987380347190764,
+      "alpha_power": 3.9873803471907636,
+      "beta_power": 19.987380347190765,
+      "gamma_power": 11.987380347190763,
+      "timestamp": 33.99609375
+    },
+    "mental_state": {
+      "stress": 65,
+      "focus": 100,
+      "sleepiness": 18,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 10.0,
+        "duration_minutes": 10,
+        "title": "🎵 Alpha Dalgası - Stres Azaltıcı",
+        "description": "10 Hz Alpha dalgası ile derin rahatlamayı destekler. Kulaklıkla dinlemeniz önerilir.",
+        "priority": 1
+      },
+      {
+        "type": "breathing",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "🫁 4-7-8 Nefes Tekniği",
+        "description": "4 saniye burnunuzdan nefes alın, 7 saniye tutun, 8 saniye ağzınızdan verin. 4 kez tekrarlayın.",
+        "priority": 1
+      },
+      {
+        "type": "meditation",
+        "frequency_hz": null,
+        "duration_minutes": 10,
+        "title": "🧘 Beden Tarama Meditasyonu",
+        "description": "Vücudunuzdaki her bölgeyi sırayla tarayın ve gevşetin.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "stressed"
+  },
+  {
+    "timestamp": "2025-11-21T20:18:13.611895",
+    "band_powers": {
+      "delta_power": 3.9977674071293805,
+      "theta_power": 5.9977674071293805,
+      "alpha_power": 3.9977674071293805,
+      "beta_power": 19.997767407129377,
+      "gamma_power": 11.99776740712938,
+      "timestamp": 34.99609375
+    },
+    "mental_state": {
+      "stress": 65,
+      "focus": 100,
+      "sleepiness": 18,
+      "confidence": 0.9
+    },
+    "recommendations": [
+      {
+        "type": "binaural_beats",
+        "frequency_hz": 10.0,
+        "duration_minutes": 10,
+        "title": "🎵 Alpha Dalgası - Stres Azaltıcı",
+        "description": "10 Hz Alpha dalgası ile derin rahatlamayı destekler. Kulaklıkla dinlemeniz önerilir.",
+        "priority": 1
+      },
+      {
+        "type": "breathing",
+        "frequency_hz": null,
+        "duration_minutes": 5,
+        "title": "🫁 4-7-8 Nefes Tekniği",
+        "description": "4 saniye burnunuzdan nefes alın, 7 saniye tutun, 8 saniye ağzınızdan verin. 4 kez tekrarlayın.",
+        "priority": 1
+      },
+      {
+        "type": "meditation",
+        "frequency_hz": null,
+        "duration_minutes": 10,
+        "title": "🧘 Beden Tarama Meditasyonu",
+        "description": "Vücudunuzdaki her bölgeyi sırayla tarayın ve gevşetin.",
+        "priority": 2
+      }
+    ],
+    "current_mode": "stressed"
+  }
+]
